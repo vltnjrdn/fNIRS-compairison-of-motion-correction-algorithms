@@ -2,14 +2,14 @@
 %%%%%%%%%% ONE TIME WINDOW AND ONE CHANNEL %%%%%%%%%%
 
 %% README
-% I kept this skript because some of the algorithms show different
-% performace depending on wheter they are applied to the whole dataset
+% I kept this script because some of the algorithms show different
+% performance depending on whether they are applied to the whole dataset
 % compared to a specific time window
 
-% for this skript to run as it is right now you will need:
+% for this script to run as it is right now you will need:
 % 1. homer2
-% 2. one fNIRS dataset from the taste experiment (I used 2025-11-13_001)
-% 3. the compute_PSD_oxyHb.m function I wrote to get a table with the Power 
+% 2. the fNIRS dataset from the taste experiment (2025-11-13_001)
+% 3. the compute_PSD_oxyHb.m function I wrote to get a table with the power 
 %    of the signal in dB in 4 different frequency bands 
 %    ('0.015–0.15 Hz','0.2–0.4 Hz','0.7–1.3 Hz','2–5 Hz')
 
@@ -336,3 +336,4 @@ eval_meanAmp.Properties.VariableNames = algNames;
 
 % Display
 disp(eval_meanAmp)
+
