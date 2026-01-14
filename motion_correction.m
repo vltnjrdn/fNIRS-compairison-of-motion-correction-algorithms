@@ -157,7 +157,7 @@ for idx = 1:length(dod_list)
     % parts already marked as motion artifacts before
     
     n_motion = sum(tIncCh(bad_mask) == 0); % number 
-    r_motion = n_motion / numel(bad_mask); % ratio 
+    r_motion = n_motion / nnz(bad_mask); % ratio 
 
     eval_motion_artifacts{'motion artifacts (motion mask)', algNames{idx}} = n_motion;
     eval_motion_artifacts{'motion ratio (motion mask)', algNames{idx}} = r_motion;
@@ -310,7 +310,7 @@ t_start = stim1(1);
 t_end = stim1(2);
 
 
-rel_start = t_start - stim1(1) + 1;                
+rel_start = 1;                
 rel_end   = t_end - t_start + 1;
 
 % Preallocate cell arrays for plotting
@@ -408,3 +408,4 @@ end
 eval_meanAmp.Properties.VariableNames = algNames;
 
 disp(eval_meanAmp)
+
